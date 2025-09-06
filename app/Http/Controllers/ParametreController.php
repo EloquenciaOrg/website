@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Parametre;
 use App\Models\Blog;
+use Illuminate\Support\Facades\Log;
 
 class ParametreController extends Controller
 {
@@ -33,7 +34,7 @@ class ParametreController extends Controller
             $setting = null;
             return view('welcome', compact('setting','partenaires','articles'));
         }
-        
+
     }
 
     public function desactiver(Request $request)
@@ -77,12 +78,11 @@ class ParametreController extends Controller
             'description' => 'required|string|max:1000',
         ]);
 
-        // Récupère tous les articles "à la une" existants
-        $last = Parametre::where('name', 'like', 'partenaire%')
-                        ->orderByRaw('CAST(SUBSTRING(name, 18) AS UNSIGNED) DESC')
-                        ->first();
+        $last = Parametre::where('name', 'like', 'partenaire_%')
+            ->orderByRaw('CAST(SUBSTRING(name, 12) AS UNSIGNED) DESC')
+            ->first();
 
-        // Détermine le prochain numéro d'article
+        // Détermine le prochain numéro
         $nextId = 1;
         if ($last) {
             $parts = explode('_', $last->name);
@@ -94,11 +94,13 @@ class ParametreController extends Controller
         $name = 'partenaire_' . $nextId;
         $image = 'images/' . $request->image;
 
-        // Création de l’article
-        $article = new Parametre();
-        $article->name = $name;
-        $article->state = 1;
-        $article->value = json_encode([
+
+        Log::info('Nom du partenaire généré : ' . $name);
+
+        $partner = new Parametre();
+        $partner->name = $name;
+        $partner->state = 1;
+        $partner->value = json_encode([
             'nom' => $request->nom,
             'image' => $image,
             'description' => $request->description,
@@ -106,7 +108,7 @@ class ParametreController extends Controller
             'link' => $request->link
         ]);
 
-        $article->save();
+        $partner->save();
 
         return back()->with('success', 'Partenaire ajouté avec succès.');
     }
@@ -120,5 +122,5 @@ class ParametreController extends Controller
         return back()->with('success', 'c supprimé');
     }
 
-    
+
 }
