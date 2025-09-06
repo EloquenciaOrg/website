@@ -21,8 +21,8 @@ Route::get('/blog', function () {
     return view('blog');
 });
 
-Route::get('/nos_services', function () {
-    return view('nos_services');
+Route::get('/services', function () {
+    return view('services');
 });
 
 Route::get('/about', function () {
@@ -49,8 +49,8 @@ Route::get('/admin/members', function () {
     return view('admin.members');
 })->middleware('auth:admin');
 
-Route::get('/mentions_legales', function () {
-    return view('mentions_legales');
+Route::get('/legals', function () {
+    return view('legals');
 });
 
 Route::get('/login', function () {
@@ -130,4 +130,4 @@ Route::get('/captcha-image', function () {
     exit;
 })->name('captcha.image');
 
-URL::forceScheme('https'); //force https 
+URL::forceScheme('https'); //force https

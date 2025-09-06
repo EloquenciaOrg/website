@@ -5,7 +5,7 @@
 
     <div class="container py-5">
   <div class="mb-5 text-center">
-    
+
     <h1 class="fw-bold text-dark">Mentions légales</h1>
     <p class="text-muted">Conformément à la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique</p>
   </div>
@@ -42,7 +42,7 @@
   <div class="bg-white p-4 shadow rounded mb-4 border-start border-4 border-warning">
     <h4 class="fw-bold text-dark">Contact</h4>
     <p><strong>Demandes générales</strong> : <a href="mailto:contact@eloquencia.org" class="text-warning">contact@eloquencia.org</a></p>
-    <p><strong>Support technique</strong> : <a href="mailto:dev@eloquencia.org" class="text-warning">dev@eloquencia.org</a></p>
+    <p><strong>Support technique</strong> : <a href="mailto:admin@eloquencia.org" class="text-warning">dev@eloquencia.org</a></p>
   </div>
 
   <div class="bg-white p-4 shadow rounded mt-4 border-start border-4 border-warning">
@@ -62,7 +62,7 @@
 
   <div class="bg-white p-4 shadow rounded border-start border-4 border-warning">
     <p>Les informations recueillies lors de votre adhésion via HelloAsso sont enregistrées dans un fichier informatisé par l’association.</p>
-    <p>Les données sont hébergées chez PulseHeberg. Elles ne sont pas transmises à des tiers et sont conservées 6 mois après la fin de votre adhésion.</p>
+    <p>Les données sont hébergées chez OVH SAS. Elles ne sont pas transmises à des tiers et sont conservées 24 mois après la fin de votre adhésion.</p>
     <p>Vous pouvez demander l’accès, la rectification ou l’effacement de vos données, ainsi qu’exercer votre droit à la limitation ou opposition au traitement. En cas d’opposition ou suppression, l’adhésion sera annulée sans remboursement.</p>
     <p>Consultez le site de la <a href="https://cnil.fr" class="text-warning" target="_blank">CNIL</a> pour plus d’informations.</p>
     <p>Pour toute demande relative au traitement des données personnelles, contactez : <a href="mailto:contact@eloquencia.org?subject=RGPD" class="text-warning">contact@eloquencia.org</a> (Objet : RGPD).</p>

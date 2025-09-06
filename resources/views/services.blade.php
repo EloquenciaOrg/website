@@ -5,7 +5,7 @@
 
   <div class="container text-center mb-5">
     <img src="{{ asset('images/logo.png') }}" alt="logo" style="width: 120px; height: 120px;">
-    <h2 class="fw-bold display-6">Nos Services</h2>
+    <h2 class="fw-bold display-6">Nos services</h2>
     <p class="text-muted">Découvrez les valeurs, les engagements et les avantages de l'association</p>
 
   </div>
@@ -41,11 +41,6 @@
         <div class="col-md-4">
           <img src="{{ asset('images/marouan_gateau 2.png') }}" class="img-fluid rounded mb-3 shadow-sm" alt="Atelier 3">
         </div>
-      </div>
-
-      <div class="alert alert-warning mt-4">
-        <strong><i class="bi bi-person-vcard-fill"></i> Étudiants :</strong> Bénéficiez automatiquement de <strong>-50%</strong> sur votre adhésion (10€/an)<br>
-        <a href="{{ url('/reduction') }}" class="btn btn-outline-warning mt-2">Faire une demande de réduction</a>
       </div>
     </div>
   </div>

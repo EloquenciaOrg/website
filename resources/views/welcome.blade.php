@@ -17,7 +17,7 @@
 @section('content')
 
   <!-- BANNIÈRE DÉFILANTE -->
-   
+
   @if($setting)
     <div class="mt-3 bg-light">
       <div class="highlight-bar text-center">
@@ -36,8 +36,8 @@
   <div class="bg-light text-center mt-3">
     <img src="{{ asset('images/logo.png') }}" alt="logo" style="width: 120px; height: 120px;">
     <h1 class="fw-bold fs-1 padding-top bg-light">Eloquéncia</h1>
-    <p class="lead bg-light">La plateforme de cours en ligne pour apprendre à parler en public</p>
-    <a href="https://www.helloasso.com/associations/eloquencia/adhesions/adhesion" class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#helloassoModal">Adhérer</a>
+    <p class="lead bg-light">L’art de convaincre, le plaisir de parler !</p>
+    <a href="#" class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#helloassoModal">Adhérer</a>
     @guest('member')<a href="{{ url('/login') }}" class="btn btn-sm btn-warning">Connexion</a>@endguest
     @auth('member')<a href="{{ url('/lms') }}" class="btn btn-sm btn-warning">Accès au cours</a>@endauth
   </div>
@@ -90,7 +90,7 @@
   </div>
 
   <!-- SECTION PARTENAIRES -->
-  <section class="py-5 bg-light" id="partenaire">
+  <section class="py-5 bg-light" id="partenaires">
     <div class="container">
       <h2 class="text-center fw-bold mb-5">Nos Partenaires</h2>
         <div class="row g-4 justify-content-center">
@@ -134,12 +134,12 @@
         </div>
       @endif
         <div class="mb-3">
-          <label for="name" class="form-label">Nom</label>
-          <input type="text" class="form-control" id="name" name="name" placeholder="Votre nom" required>
+          <label for="name" class="form-label">Nom Prénom</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Jean Montrouge" required>
         </div>
         <div class="mb-3">
           <label for="email" class="form-label">Adresse email</label>
-          <input type="email" class="form-control" id="email" name="email" placeholder="Votre email" required>
+          <input type="email" class="form-control" id="email" name="email" placeholder="jean.montrouge@mail.fr" required>
         </div>
         <div class="mb-3">
           <label for="message" class="form-label">Message</label>
@@ -159,7 +159,7 @@
           @enderror
 
           <input class="form-check-input mt-2" type="checkbox" id="cgu" name="cgu" required>
-          <label class="form-check-label mt-1" for="cgu">J’accepte les <a href="" target="_blank">conditions générales d’utilisation des données</a></label>
+          <label class="form-check-label mt-1" for="cgu">J’accepte les <a href="/legals" target="_blank">conditions générales d’utilisation des données</a></label>
         </div>
         <div class="text-center">
           <button type="submit" class="btn btn-light px-4">Envoyer</button>

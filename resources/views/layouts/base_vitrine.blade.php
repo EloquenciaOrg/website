@@ -27,19 +27,19 @@
 
       <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="{{ url('/nos_services') }}">Nos services</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url('/services') }}">Nos services</a></li>
           <li class="nav-item"><a class="nav-link" href="{{ url('/blog') }}">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="{{ url('/#partenaire') }}">Partenaires</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url('/#partenaires') }}">Partenaires</a></li>
           <!-- <li class="nav-item"><a class="nav-link" href="{{ url('/reduction') }}">Réduction</a></li> -->
           <li class="nav-item"><a class="nav-link" href="{{ url('/#contact') }}">Contact</a></li>
           <li class="nav-item"><a class="nav-link" href="{{ url('/about') }}">A propos</a></li>
-          @guest('member')<li class="nav-item"><a class="nav-link" href="{{ url('/login') }}">Connexion</a></li>@endguest
+            <!--@guest('member')<li class="nav-item"><a class="nav-link" href="{{ url('/login') }}">Connexion</a></li>@endguest
           @auth('member')
           <form method="POST" action="{{ route('member.logout') }}">
             @csrf
             <button type="submit" class="btn nav-link">Déconnexion <i class="bi bi-box-arrow-right"></i></button>
           </form>
-          @endauth
+          @endauth-->
         </ul>
       </div>
     </div>
@@ -52,7 +52,7 @@
     <footer class="bg-light text-center py-3">
     <div class="container">
         <small class="text-muted">
-        © 2025 <strong>Eloquéncia</strong> | Fait avec 💙 et hébergé en France | <a href="/mentions_legales">Mentions légales</a>
+        © 2025 <strong>Eloquéncia</strong> | Fait avec 💙 et hébergé en France | <a href="/legals">Mentions légales</a>
         </small>
     </div>
     </footer>
@@ -77,7 +77,7 @@
     });
   });
 
-  
+
 </script>
 </body>
 </html>
