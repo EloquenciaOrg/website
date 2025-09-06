@@ -82,7 +82,7 @@
       </div>
       <div class="timeline-step">
         <h5 class="fw-bold text-warning">Février 2025</h5>
-        <p>Anniversaire des 1 an de l'association</p>
+        <p>Premier anniversaire de l'association</p>
       </div>
       <div class="timeline-step">
         <h5 class="fw-bold text-warning">Mars 2025</h5>

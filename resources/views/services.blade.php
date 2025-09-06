@@ -92,18 +92,5 @@
     </div>
   </div>
 
-  <!-- Présentateur évènements -->
-  <div class="card shadow mb-5 border-0">
-    <div class="card-body">
-      <h2 class="text-warning fw-bold mb-3">
-        <i class="bi bi-mic-fill me-2"></i>Présentateur pour vos événements
-      </h2>
-      <p>Organisez un concours, une remise de prix ou une cérémonie ?<br>
-      Nous proposons un présentateur spécialisé en art oratoire.</p>
-      <p>Nos intervenants savent captiver et dynamiser votre public.</p>
-      <p>📩 Contact : <a href="mailto:contact@eloquencia.org">contact@eloquencia.org</a></p>
-    </div>
-  </div>
-
 </div>
 @endsection
