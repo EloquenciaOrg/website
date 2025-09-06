@@ -32,7 +32,7 @@
     <!-- Titre principal -->
     <div class="text-center mb-5">
       <h1 class="fw-bold">Eloquéncia, l’art de convaincre, le plaisir de parler !</h1>
-      <p class="lead">L’Association Eloquéncia (loi 1901) est une jeune association fondée par Marouan Jlassi à Berre l’Étang qui a pour but d’enseigner l’art oratoire dans le milieu local. Elle a pour conviction d’aider les personnes qui souhaitent développer et perfectionner leur expression orale quotidienne, professionnelle ou scolaire, notamment pour la préparation d’entretiens d’embauche ou d’examens oraux.  </p>
+      <p class="lead">L’Association Eloquéncia (loi 1901) est une jeune association fondée par Marouan Jlassi à Berre l’Étang qui a pour but d’enseigner l’art oratoire dans le milieu local. Elle a pour conviction d’aider les personnes qui souhaitent développer et perfectionner leur expression orale quotidienne, professionnelle ou scolaire, notamment pour la préparation d’entretiens d’embauche ou d’examens oraux.  </p>
     </div>
   </div>
 </section>
@@ -40,9 +40,9 @@
 <section class="py-5 bg-light">
   <div class="container">
     <div class="row align-items-center">
-      
+
       <div class="col-lg-6 mb-4 mb-lg-0">
-        <img src="{{ asset('images/marouan.jpg') }}" class="img-fluid rounded shadow" alt="Notre histoire" style="height: 300px;">
+        <img src="{{ asset('images/journee_asso.jpg') }}" class="img-fluid rounded shadow" alt="Notre histoire" style="height: 300px;">
       </div>
 
       <div class="col-lg-6">
@@ -62,7 +62,7 @@
 <section class="py-5 bg-light">
   <div class="container">
     <h2 class="text-center fw-bold mb-5">Notre parcours</h2>
-    
+
     <div class="timeline">
       <div class="timeline-step">
         <h5 class="fw-bold text-warning">Septembre 2023</h5>
@@ -94,9 +94,9 @@
     </div>
   </div>
   </section>
-    
 
-          
+
+
 <!-- About 1 - Bootstrap Brain Component -->
 <section class="py-3 py-md-5">
   <div class="container">
@@ -148,10 +148,10 @@
 <section class="py-5">
   <div class="container">
     <div class="row justify-content-center">
-      
+
       <div class="col-lg-8">
         <div class="p-4 rounded shadow-sm bg-warning bg-opacity-25 position-relative">
-          
+
           <h3 class="fw-bold mb-3 text-warning">
             <i class="bi bi-chat-dots"></i> Le saviez vous ?
           </h3>
