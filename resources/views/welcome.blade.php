@@ -46,10 +46,16 @@
   <div id="carouselEloquencia" class="carousel slide mt-4 bg-light" data-bs-ride="carousel" data-bs-interval="6000">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="{{ asset('images/carousel1_2.jpg') }}" class="d-block w-100" alt="Image 1" style="height: 400px; object-fit: cover;">
+        <img src="{{ asset('images/carousel/banner1.webp') }}" class="d-block w-100" alt="Image 1" style="height: 400px; object-fit: cover;">
       </div>
       <div class="carousel-item">
-        <img src="{{ asset('images/carousel2_2.jpg') }}" class="d-block w-100" alt="Image 2" style="height: 400px; object-fit: cover;">
+        <img src="{{ asset('images/carousel/banner2.webp') }}" class="d-block w-100" alt="Image 2" style="height: 400px; object-fit: cover;">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ asset('images/carousel/banner3.webp') }}" class="d-block w-100" alt="Image 2" style="height: 400px; object-fit: cover;">
+      </div>
+      <div class="carousel-item">
+          <img src="{{ asset('images/carousel/banner4.webp') }}" class="d-block w-100" alt="Image 2" style="height: 400px; object-fit: cover;">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselEloquencia" data-bs-slide="prev">
