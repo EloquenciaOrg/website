@@ -37,9 +37,9 @@
     <img src="{{ asset('images/logo.png') }}" alt="logo" style="width: 120px; height: 120px;">
     <h1 class="fw-bold fs-1 padding-top bg-light">Eloquéncia</h1>
     <p class="lead bg-light">L’art de convaincre, le plaisir de parler !</p>
-    <a href="#" class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#helloassoModal">Adhérer</a>
-    @guest('member')<a href="{{ url('/login') }}" class="btn btn-sm btn-warning">Connexion</a>@endguest
-    @auth('member')<a href="{{ url('/lms') }}" class="btn btn-sm btn-warning">Accès au cours</a>@endauth
+    <a href="#" class="btn btn-lg btn-warning" data-bs-toggle="modal" data-bs-target="#helloassoModal">Adhérer</a>
+      <!--@guest('member')<a href="{{ url('/login') }}" class="btn btn-sm btn-warning">Connexion</a>@endguest
+    @auth('member')<a href="{{ url('/lms') }}" class="btn btn-sm btn-warning">Accès au cours</a>@endauth -->
   </div>
 
   <!-- CAROUSEL -->
