@@ -20,6 +20,7 @@
     <script defer type="text/javascript" src="js/klaro-js/config.js"></script>
     <script defer type="text/javascript" src="https://cdn.kiprotect.com/klaro/v0.7.22/klaro.js"></script>
     <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7.22/klaro.min.css" />
+    <noscript><img referrerpolicy="no-referrer-when-downgrade" src="https://analytics.eloquencia.org/matomo.php?idsite=1&amp;rec=1" style="border:0" alt="" /></noscript>
 
   <!-- Bootstrap CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
