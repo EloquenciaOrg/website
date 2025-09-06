@@ -18,6 +18,7 @@
     <meta property="og:title" content="Accueil">
     <meta property="og:description" content="Eloquéncia est une association loi 1901 visant à promouvoir l'éloquence et l'art oratoire">
     <script async="" src="https://analytics.eloquencia.org/matomo.js"></script>
+    <script src="js/analytics.js"></script>
     <script defer type="text/javascript" src="js/klaro-config.js"></script>
     <script defer type="text/javascript" src="https://cdn.kiprotect.com/klaro/v0.7.22/klaro.js"></script>
     <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7.22/klaro.min.css" />
