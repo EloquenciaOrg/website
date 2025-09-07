@@ -228,5 +228,19 @@
       }
     });
   </script>
+  <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          const emailInput = document.getElementById('email');
+
+          emailInput.addEventListener('blur', function () {
+              const email = emailInput.value.toLowerCase();
+
+              if (email.includes('@icloud.com') || email.includes('@sfr.fr')) {
+                  const modal = new bootstrap.Modal(document.getElementById('emailWarningModal'));
+                  modal.show();
+              }
+          });
+      });
+  </script>
 
 @endsection

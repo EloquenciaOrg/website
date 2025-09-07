@@ -80,22 +80,6 @@
 
   <!-- Scripts Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const emailInput = document.getElementById('email');
-
-    emailInput.addEventListener('blur', function () {
-      const email = emailInput.value.toLowerCase();
-
-      if (email.includes('@icloud.com') || email.includes('@sfr.fr')) {
-        const modal = new bootstrap.Modal(document.getElementById('emailWarningModal'));
-        modal.show();
-      }
-    });
-  });
-
-
-</script>
   <div id="klaro" style="--button-text-color: #fff; --dark1: #fafafa; --dark2: #777; --dark3: #555; --light1: #444; --light2: #666; --light3: #111; --green3: #f00; --notice-top: 20px; --notice-bottom: auto; --notice-left: 20px; --notice-right: auto; --notice-max-width: calc(100vw - 60px); --notice-position: fixed;"><div lang="fr" class="klaro"><div id="cookieScreen" class="cookie-modal"><div class="cm-bg"></div><div class="cm-modal cm-klaro"><div class="cm-header"><h1 class="title"><span><span>Services que nous souhaitons utiliser</span></span></h1><p><span><span>Vous pouvez ici évaluer et personnaliser les services que nous aimerions utiliser sur ce site. C'est vous qui décidez ! Activez ou désactivez les services comme bon vous semble.</span><span> </span><span>Pour en savoir plus, veuillez lire notre </span><a href="/legal" target="_blank" rel="noopener">politique de confidentialité</a><span>.</span></span></p></div><div class="cm-body"><ul class="cm-purposes"><li class="cm-purpose"><input id="purpose-item-analytics" aria-labelledby="purpose-item-analytics-title" aria-describedby="purpose-item-analytics-description" type="checkbox" class="cm-list-input"><label for="purpose-item-analytics" class="cm-list-label"><span id="purpose-item-analytics-title" class="cm-list-title">Analytics</span><span class="cm-switch"><div class="slider round active"></div></span></label><div id="purpose-item-analytics-description"></div><div class="cm-services"><div class="cm-caret"><a href="#" aria-haspopup="true" aria-expanded="false" tabindex="0"><span>↓</span> 1 service</a></div><ul class="cm-content"><li class="cm-service"><div><input id="service-item-matomo" aria-labelledby="service-item-matomo-title" aria-describedby="service-item-matomo-description" tabindex="-1" type="checkbox" class="cm-list-input"><label for="service-item-matomo" class="cm-list-label"><span id="service-item-matomo-title" class="cm-list-title">Matomo</span><span title="Ce service est chargé par défaut (mais vous pouvez le désactiver)" class="cm-opt-out">(opt-out)</span><span class="cm-switch"><div class="slider round active"></div></span></label><div id="service-item-matomo-description"><p class="purposes">Objet: Analytics</p></div></div></li></ul></div></li></ul></div><div class="cm-footer"><div class="cm-footer-buttons"><button type="button" class="cm-btn cm-btn-decline cm-btn-danger cn-decline">Je refuse</button><button type="button" class="cm-btn cm-btn-success cm-btn-info cm-btn-accept">Accepter sélectionné</button><button type="button" class="cm-btn cm-btn-success cm-btn-accept-all">Accepter tout</button></div><p class="cm-powered-by"><a target="_blank" href="https://kiprotect.com/klaro" rel="noopener">Réalisé avec Klaro !</a></p></div></div></div></div></div>
 </body>
 </html>
