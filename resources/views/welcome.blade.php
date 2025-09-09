@@ -114,16 +114,32 @@
                     </div>
                   </div>
                   <p class="text-muted flex-grow-1">{{ $partenaire->description }}</p>
-                  @if($partenaire->link == "https://www.burgerking.fr/")
-                    <a href="{{ $partenaire->link }}" class="btn btn-sm btn-outline-warning mt-3 align-self-start" target="_blank">Promis, c’est pas une pub pour McDo</a>
-                  @else
                     <a href="{{ $partenaire->link }}" class="btn btn-sm btn-outline-warning mt-3 align-self-start" target="_blank">En savoir plus</a>
-                  @endif
                 </div>
               </div>
             @endforeach
         </div>
     </div>
+  </section>
+
+  <!-- SECTION REDUCTION -->
+  <section class="py-5 bg-light" id="discount">
+      <div class="container">
+          <h2 class="text-center fw-bold mb-5">Réduction</h2>
+          <div class="row g-4 justify-content-center">
+                  <div class="col-md-6 col-lg-10">
+                      <div class="bg-white rounded shadow p-4 h-100 d-flex flex-column">
+                          <div class="d-flex align-items-center mb-3">
+                              <img src="{{ asset('images/reduction.webp') }}" alt="Image reduction" class="me-3 img-fluid rounded" style="max-width: 450px; max-height: 300px; object-fit: cover;">
+                              <p class="flex-grow-1">Vous avez moins de 18 ans ou vous êtes étudiant ? Bénéficiez de -5€ sur votre adhésion !
+                                  Demandez une réduction en envoyant un e-mail à <a href="mailto:contact@eloquencia.org">contact@eloquencia.org</a> avec un justificatif (carte d'étudiant, certificat de scolarité, pièce d'identité...).
+                              </p>
+                          </div>
+                          <a href="mailto:contact@eloquencia.org" class="btn btn-sm btn-warning mt-3 align-self-end" target="_blank">Envoyer un e-mail</a>
+                      </div>
+                  </div>
+          </div>
+      </div>
   </section>
 
   <!-- FORMULAIRE DE CONTACT -->
