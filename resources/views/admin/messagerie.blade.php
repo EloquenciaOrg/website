@@ -21,8 +21,8 @@
                         </p>
                         <a href="mailto:{{ $msg->email }}" class="btn btn-sm btn-outline-warning">Répondre</a>
                         <!-- Modal de confirmation -->
-                        <button type="submit" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal">Supprimer</button>
-                        <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModal" aria-hidden="true">
+                        <button type="submit" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal{{ $msg->id }}">Supprimer</button>
+                        <div class="modal fade" id="confirmDeleteModal{{ $msg->id }}" tabindex="-1" aria-labelledby="confirmDeleteModal{{ $msg->id }}" aria-hidden="true">
                           <div class="modal-dialog">
                             <div class="modal-content">
                               <div class="modal-header">
@@ -34,7 +34,7 @@
                                 <form method="POST" action="{{ route('messagerie.delete') }}">
                                   @csrf
                                   @method('DELETE')
-                                  <input type="hidden" name="id" value="{{ $msg->ID }}">
+                                  <input type="hidden" name="id" value="{{ $msg->id }}">
                                     <button type="submit" class="btn btn-warning">Oui, supprimer</button>
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
                                 </form>
@@ -43,13 +43,13 @@
                           </div>
                         </div>
 
-                        <button type="button" class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#confirmBanModal{{ $msg->ID }}">Bloquer</button>
+                        <button type="button" class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#confirmBanModal{{ $msg->id }}">Bloquer</button>
                         <!-- Modal de confirmation de bannissement -->
-                        <div class="modal fade" id="confirmBanModal{{ $msg->ID }}" tabindex="-1" aria-labelledby="confirmBanModalLabel{{ $msg->ID }}" aria-hidden="true">
+                        <div class="modal fade" id="confirmBanModal{{ $msg->id }}" tabindex="-1" aria-labelledby="confirmBanModalLabel{{ $msg->id }}" aria-hidden="true">
                           <div class="modal-dialog">
                             <div class="modal-content">
                               <div class="modal-header">
-                                <h5 class="modal-title" id="confirmBanModalLabel{{ $msg->ID }}">Confirmation</h5>
+                                <h5 class="modal-title" id="confirmBanModalLabel{{ $msg->id }}">Confirmation</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
                               </div>
                               <div class="modal-body">
@@ -68,7 +68,7 @@
                           </div>
                         </div>
 
-                        
+
                     </div>
                     <div class="card-footer bg-transparent border-top-0 text-end text-muted small">
                         🕒 {{ \Carbon\Carbon::parse($msg->datetime)->format('d/m/Y H:i') }}

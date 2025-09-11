@@ -7,6 +7,7 @@ use App\Services\Captcha;
 
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class MessagerieController extends Controller
 {
@@ -60,15 +61,13 @@ class MessagerieController extends Controller
     {
         $id = $request->input('id');
 
-        $message = Messagerie::find($id);
+        $message = Messagerie::findOrFail($id);
 
-        if (!$message) {
-            return back()->with('error', 'Message introuvable.');
-        }
 
         $message->delete();
 
         return back()->with('success', 'Message supprimé avec succès.');
+
     }
 
     public function banUser(Request $request)
