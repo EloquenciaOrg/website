@@ -10,7 +10,6 @@ class Admin extends Authenticatable
 {
     use HasFactory;
     public $timestamps = false; // Cela indique à Laravel de ne pas gérer automatiquement les colonnes created_at et updated_at.
-    protected $primaryKey = 'id'; // a specifier car Laravel pense que par défaut la clé primaire est id (en minuscule)
 
 
     protected $fillable = [
