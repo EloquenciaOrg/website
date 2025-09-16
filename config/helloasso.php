@@ -6,4 +6,5 @@ return [
     'client_secret' => env('HELLOASSO_CLIENT_SECRET'),
     'organization' => env('HELLOASSO_ORGANIZATION_SLUG'),
     'form' => env('HELLOASSO_FORM_SLUG'),
+    'weburl' => env('WEB_BASE_URL')
 ];

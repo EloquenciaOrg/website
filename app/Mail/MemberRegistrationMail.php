@@ -23,7 +23,7 @@ class MemberRegistrationMail extends Mailable
     {
         $this->firstname = $firstname;
         $this->token = $token;
-        $this->confirmationUrl = env('APP_URL') . "/registrationconfirmation?token={$token}";
+        $this->confirmationUrl = config('helloasso.weburl') . "/registrationconfirmation?token={$token}";
     }
 
     /**
