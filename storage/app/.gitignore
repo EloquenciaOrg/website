@@ -2,3 +2,4 @@
 !private/
 !public/
 !.gitignore
+ha_creds.json
