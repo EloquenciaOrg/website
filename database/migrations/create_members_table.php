@@ -17,11 +17,10 @@ return new class extends Migration
             $table->string('firstname')->comment('First name');
             $table->string('email')->unique()->comment('Email address');
             $table->integer('registrationToken')->unique()->comment('Unique token for registration');
-            $table->string('password')->comment('Password in bcrypt format');
+            $table->string('password')->nullable()->comment('Password in bcrypt format');
             $table->tinyInteger('newsletter')->default(0)->comment('0 if not subscribed, 1 if subscribed');
             $table->datetime('registrationDate')->default(now())->comment('Membership registration date');
             $table->datetime('expirationDate')->default(now() ->addYear())->comment('Membership expiration date');
-            $table->tinyInteger('lmsAccess')->default(0)->comment('0 if no access, 1 if access to LMS');
             $table->datetime('lmsAccessExpiration')->nullable()->comment('LMS access expiration date');
             $table->json('subscriptionHistory')->nullable()->comment('Membership history');
             $table->integer('resetToken')->nullable()->comment('Unique token for password reset');

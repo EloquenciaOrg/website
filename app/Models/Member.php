@@ -26,6 +26,7 @@ class Member extends Authenticatable
         'expirationDate',
         'subscriptionHistory',
         'reset',
-        'lessons_history'
+        'lessons_history',
+        'lmsAccessExpiration'
     ];
 }
