@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://eloquencia.org/assets/eloquencia_round.png" width="200" alt="Eloquéncia logo"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://eloquencia.org/images/logo.png" width="200" alt="Eloquéncia logo"></a></p>
 
 
 
