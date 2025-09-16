@@ -40,7 +40,7 @@ class HaToDb extends Command
         $this->saveMembers($membersAuto, "auto");
         $this->saveMembers($membersManual, "manual");
 
-        $this->info('HelleAsso members synchronization completed successfully.');
+        $this->info('HelloAsso members synchronization completed successfully.');
     }
 
     private function auth(): void
@@ -80,6 +80,7 @@ class HaToDb extends Command
                 $credentials["access_token"] = $data["access_token"];
                 $credentials["refresh_token"] = $data["refresh_token"] ?? null;
                 $credentials["expires"] = time() + $data["expires_in"] - 60; // Refresh 1 minute before expiry
+                file_put_contents($this->tokenFile, json_encode($credentials));
             } else {
                 throw new \Exception("Failed to authenticate with HelloAsso API: " . $response->body());
             }
@@ -99,7 +100,7 @@ class HaToDb extends Command
         $params = [
             "pageSize" => 100,
             "pageIndex" => 1,
-            "withDetails" => true,
+            "withDetails" => "true",
             "itemStates" => $state,
         ];
 
@@ -109,7 +110,7 @@ class HaToDb extends Command
                 ->get($url, $params);
 
             if (!$response->successful()) {
-                throw new \Exception("API request failed: " . $response->body());
+                throw new \Exception("API request failed: " . json_encode($response->json()));
             }
 
             $json = $response->json();
@@ -133,6 +134,12 @@ class HaToDb extends Command
             $date = \Carbon\Carbon::parse($dateStr);
             $expiration = $date->copy()->addYear();
 
+            if (!isset($member["options"]) || !isset($member["options"][0]["LMS 1 an"])) {
+                $lms = $date;
+            } else {
+                $lms = $expiration;
+            }
+
             $token = rand(100000, 999999);
 
             $newMember = Member::create([
@@ -142,6 +149,7 @@ class HaToDb extends Command
                 "registrationToken" => $token,
                 "registrationDate" => $date,
                 "expirationDate" => $expiration,
+                "lmsAccessExpiration" => $lms,
             ]);
 
             // Envoi du mail de confirmation
