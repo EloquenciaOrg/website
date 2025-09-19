@@ -110,7 +110,7 @@ Route::get('/article/{id}', [BlogController::class, 'article'])->name('article.s
 
 Route::get('/lms', [LessonController::class, 'index'])->middleware('auth:member');
 Route::get('/lms/chapitre/{id}', [LessonController::class, 'chapitre'])->middleware('auth:member');
-Route::post('/ajouter_lesson', [LessonController::class, 'ajouter_lesson'])->name('add_lesson')->middleware('auth:admin');
+Route::post('/ajouter_lesson', [LessonController::class, 'lesson_add'])->name('add_lesson')->middleware('auth:admin');
 Route::get('/lecon/{id}', [LessonController::class, 'show'])->name('lecon.afficher')->middleware('auth:member');
 
 Route::get('/admin/lecons', [LessonController::class, 'index_lecons'])->middleware('auth:admin');
