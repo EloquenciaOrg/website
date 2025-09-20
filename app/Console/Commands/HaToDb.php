@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use App\Mail\MemberRegistrationMail;
 use App\Models\Member;
+use Carbon\Carbon;
 use Illuminate\Console\Command;
 use Illuminate\Http\Client\ConnectionException;
 use Illuminate\Support\Facades\Http;
@@ -23,7 +24,7 @@ class HaToDb extends Command
      *
      * @var string
      */
-    protected $description = 'HelleAsso members synchronization';
+    protected $description = 'HelloAsso members synchronization';
 
     /**
      * Execute the console command.
@@ -36,6 +37,7 @@ class HaToDb extends Command
 
         $membersAuto = $this->getMembers("Processed");
         $membersManual = $this->getMembers("Registered");
+        $purchases = $this->getPurchases();
 
         $this->saveMembers($membersAuto, "auto");
         $this->saveMembers($membersManual, "manual");
@@ -87,6 +89,43 @@ class HaToDb extends Command
         }
     }
 
+    private function getPurchases(): array
+    {
+        $credentials = (json_decode(file_get_contents($this->tokenFile), true));
+        $url = sprintf(
+            "%s/v5/organizations/%s/forms/Shop/%s/orders",
+            config("helloasso.api_base_url"),
+            config("helloasso.organization"),
+            config("helloasso.purchase_form")
+        );
+
+        $params = [
+            "pageSize" => 100,
+            "pageIndex" => 1,
+            "withDetails" => "false",
+            "withCount" => "false",
+            //"from" => now()->subHours(1)->toIso8601String(),
+            //"to" => now()->toIso8601String(),
+            "sortOrder" => "desc",
+        ];
+
+        $purchases = [];
+        do {
+            $response = Http::withToken($credentials["access_token"])
+                ->get($url, $params);
+
+            if (!$response->successful()) {
+                throw new \Exception("API request failed: " . json_encode($response->json()));
+            }
+
+            $json = $response->json();
+            $purchases = array_merge($purchases, $json["data"]);
+
+            $params["pageIndex"]++;
+        } while ($params["pageIndex"] <= min(100, $json["pagination"]["totalPages"]));
+        return $purchases;
+    }
+
     private function getMembers(string $state): array
     {
         $credentials = json_decode(file_get_contents($this->tokenFile), true);
@@ -94,7 +133,7 @@ class HaToDb extends Command
             "%s/v5/organizations/%s/forms/Membership/%s/items",
             config("helloasso.api_base_url"),
             config("helloasso.organization"),
-            config("helloasso.form")
+            config("helloasso.sub_form")
         );
 
         $params = [
@@ -102,6 +141,9 @@ class HaToDb extends Command
             "pageIndex" => 1,
             "withDetails" => "true",
             "itemStates" => $state,
+            "sortOrder" => "desc",
+            //"from" => now()->subHours(1)->toIso8601String(),
+            //"to" => now()->toIso8601String(),
         ];
 
         $members = [];
@@ -126,12 +168,14 @@ class HaToDb extends Command
     {
         foreach ($members as $member) {
             $email = $member["customFields"][0]["answer"];
-            if (Member::where("email", $email)->exists()) {
-                continue;
+            if (Member::where("members.email", $email)->exists()) {
+                if (!Member::where("members.expirationDate")->first()->expirationDate < $member["payments"][0]["date"]) {
+                    continue;
+                }
             }
 
             $dateStr = $member["payments"][0]["date"];
-            $date = \Carbon\Carbon::parse($dateStr);
+            $date = Carbon::parse($dateStr);
             $expiration = $date->copy()->addYear();
 
             if (!isset($member["options"]) || !isset($member["options"][0]["LMS 1 an"])) {

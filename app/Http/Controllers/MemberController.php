@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Member;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ResetPasswordMail;
 use Illuminate\Support\Facades\Hash;
@@ -34,7 +35,7 @@ class MemberController extends Controller
         ]);
 
         $id = $request->id;
-        
+
         $member = Member::find($id);
         $member->email = $request->email;
         $member->save();
@@ -47,10 +48,13 @@ class MemberController extends Controller
     try {
             if($request->ID)
             {
+                \Log::info("Recherche du membre par ID : ".$request->ID);
                 $member = Member::findOrFail($request->ID);
             }
-            else{
-                $member = Member::where('email', $request->email)->firstOrFail();
+            else
+            {
+                \Log::info("Recherche du membre par email : ".$request->email);
+                $member = Member::where('email', value: $request->email)->firstOrFail();
             }
 
             // Générer un token aléatoire à 6 chiffres
@@ -68,6 +72,7 @@ class MemberController extends Controller
 
             return back()->with('success', 'Email de réinitialisation envoyé.');
         } catch (\Exception $e) {
+            \Log::error('Erreur lors de la réinitialisation du mot de passe : '.$e->getMessage());
             return back()->with('error', "Aucun membre trouvé avec cet email.");
         }
     }
@@ -91,7 +96,7 @@ class MemberController extends Controller
         );
 
         $id = $request->id;
-        
+
         $admin = Member::find($id);
         $admin->password = Hash::make($request->password);
         $admin->save();
@@ -135,6 +140,6 @@ class MemberController extends Controller
         $request->session()->invalidate(); // Invalide la session actuelle
         $request->session()->regenerateToken(); // Regénère le token CSRF
 
-        return redirect()->route('login'); // Redirige vers la page de login 
+        return redirect()->route('login'); // Redirige vers la page de login
     }
 }
