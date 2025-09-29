@@ -16,15 +16,13 @@ return new class extends Migration
             $table->string('name')->comment('Full name');
             $table->string('firstname')->comment('First name');
             $table->string('email')->unique()->comment('Email address');
-            $table->integer('registrationToken')->unique()->comment('Unique token for registration');
+            $table->string('moodle_login')->unique();
             $table->string('password')->nullable()->comment('Password in bcrypt format');
             $table->tinyInteger('newsletter')->default(0)->comment('0 if not subscribed, 1 if subscribed');
             $table->datetime('registrationDate')->default(now())->comment('Membership registration date');
             $table->datetime('expirationDate')->default(now() ->addYear())->comment('Membership expiration date');
             $table->datetime('lmsAccessExpiration')->nullable()->comment('LMS access expiration date');
-            $table->json('subscriptionHistory')->nullable()->comment('Membership history');
-            $table->integer('resetToken')->nullable()->comment('Unique token for password reset');
-            $table->json('lessons_history')->nullable()->comment('History of lessons taken through the LMS');
+            $table->tinyInteger('isAdmin')->default(0)->comment('0 if regular member, 1 if admin');
         });
     }
 
