@@ -18,7 +18,7 @@ class Member extends Authenticatable
         'name',
         'firstname',
         'email',
-        'registrationToken',
+        'moodle_login',
         'password',
         'newsletter',
         'registrationDate',

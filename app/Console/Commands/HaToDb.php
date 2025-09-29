@@ -164,12 +164,24 @@ class HaToDb extends Command
         return $members;
     }
 
+
+    private function generateRandomPassword(int $length = 8): string
+    {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%&*()_+-=';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomString;
+    }
+
     private function saveMembers(array $members, string $type): void
     {
         foreach ($members as $member) {
             $email = $member["customFields"][0]["answer"];
             if (Member::where("members.email", $email)->exists()) {
-                if (!Member::where("members.expirationDate")->first()->expirationDate < $member["payments"][0]["date"]) {
+                if (Member::where("members.expirationDate")->first() < $member["payments"][0]["date"]) {
                     continue;
                 }
             }
@@ -184,13 +196,14 @@ class HaToDb extends Command
                 $lms = $expiration;
             }
 
-            $token = rand(100000, 999999);
+            $clearpassword = $this->generateRandomPassword(8);
 
             $newMember = Member::create([
                 "name" => $member["user"]["lastName"],
                 "firstname" => $member["user"]["firstName"],
                 "email" => $email,
-                "registrationToken" => $token,
+                "moodle_login" => strtolower($member["user"]["firstName"] . "_" . $member["user"]["lastName"]),
+                "password" => bcrypt($clearpassword),
                 "registrationDate" => $date,
                 "expirationDate" => $expiration,
                 "lmsAccessExpiration" => $lms,
@@ -199,7 +212,8 @@ class HaToDb extends Command
             // Envoi du mail de confirmation
             Mail::to($email)->send(new MemberRegistrationMail(
                 $newMember->firstname,
-                $newMember->registrationToken
+                $newMember->email,
+                $clearpassword
             ));
 
             $this->info("Mail sent to " . $email);

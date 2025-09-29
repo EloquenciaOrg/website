@@ -11,35 +11,23 @@ class MemberRegistrationService
     /**
      * Envoi d'un email de confirmation d'inscription
      */
-    public function sendRegistrationEmail($firstname, $token, $email)
+    public function sendRegistrationEmail($firstname, $password, $email)
     {
         try {
             // Utilisation de la classe Mailable pour un email plus propre
-            Mail::to($email)->send(new MemberRegistrationMail($firstname, $token));
-            
-            Log::info("Email d'inscription envoyé avec succès", [
-                'email' => $email,
-                'firstname' => $firstname,
-                'token' => $token
-            ]);
-            
+            Mail::to($email)->send(new MemberRegistrationMail($firstname, $email, $password));
+
+            Log::info("Email d'inscription envoyé avec succès");
+
             return true;
-            
+
         } catch (\Exception $e) {
             Log::error("Erreur lors de l'envoi de l'email d'inscription", [
                 'email' => $email,
                 'error' => $e->getMessage()
             ]);
-            
+
             return false;
         }
-    }
-
-    /**
-     * Génération d'un token d'inscription unique
-     */
-    public static function generateRegistrationToken()
-    {
-        return random_int(100000, 999999);
     }
 }

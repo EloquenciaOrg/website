@@ -13,17 +13,18 @@ class MemberRegistrationMail extends Mailable
     use Queueable, SerializesModels;
 
     public $firstname;
-    public $token;
+    public $password;
+    public $email;
     public $confirmationUrl;
 
     /**
      * Create a new message instance.
      */
-    public function __construct($firstname, $token)
+    public function __construct($firstname, $email, $password)
     {
         $this->firstname = $firstname;
-        $this->token = $token;
-        $this->confirmationUrl = config('helloasso.web_url') . "/registrationconfirmation?token={$token}";
+        $this->password = $password;
+        $this->email = $email;
     }
 
     /**
