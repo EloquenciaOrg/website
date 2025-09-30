@@ -33,13 +33,11 @@
 
       <div class="row mt-4">
         <div class="col-md-4">
-          <img src="{{ asset('images/marouan_gateau.png') }}" class="img-fluid rounded mb-3 shadow-sm" alt="Atelier 1">
         </div>
         <div class="col-md-4">
-          <img src="{{ asset('images/Eloquencia_groupe.png') }}" class="img-fluid rounded mb-3 shadow-sm" alt="Atelier 2">
+          <img src="{{ asset('images/services/adherents.webp') }}" class="img-fluid rounded mb-3 shadow-sm" alt="Photo de l'anniversaire de l'association">
         </div>
         <div class="col-md-4">
-          <img src="{{ asset('images/marouan_gateau 2.png') }}" class="img-fluid rounded mb-3 shadow-sm" alt="Atelier 3">
         </div>
       </div>
     </div>
@@ -85,7 +83,7 @@
       <ul class="list-unstyled">
         <li>✅ Gérer son stress en entreprise</li>
         <li>✅ Aisance face aux clients</li>
-        <li>✅ Améliorer l’élocution, articulation, clarté</li>
+        <li>✅ Améliorer l’élocution, l'articulation, la clarté</li>
       </ul>
       <p class="mt-3">📩 <strong>Formations sur devis :</strong> <a href="mailto:contact@eloquencia.org">contact@eloquencia.org</a></p>
       <p class="text-muted fst-italic">💡 Tous les fonds sont réinvestis dans nos actions (association à but non lucratif).</p>
