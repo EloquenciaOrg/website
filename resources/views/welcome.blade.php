@@ -223,7 +223,7 @@
 
               <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                  <a href="https://www.helloasso.com/associations/eloquencia/adhesions/adhesion" target="_blank" class="btn btn-warning">Continuer</a>
+                  <a href="https://www.helloasso.com/associations/eloquencia/adhesions/adhesion-2025-2026" target="_blank" class="btn btn-warning">Continuer</a>
               </div>
 
           </div>
