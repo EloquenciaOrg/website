@@ -191,7 +191,7 @@ class HaToDb extends Command
             $expiration = $date->copy()->addYear();
 
             if (!isset($member["options"]) || !isset($member["options"][0]["LMS 1 an"])) {
-                $lms = $date;
+                continue;
             } else {
                 $lms = $expiration;
             }
