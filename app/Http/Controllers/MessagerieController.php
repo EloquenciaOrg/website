@@ -51,6 +51,7 @@ class MessagerieController extends Controller
             'email' => $request->email,
             'message' => $request->message,
             'ip' => $ip,
+            'datetime' => now(),
         ]);
 
         // Redirection avec message de succès
