@@ -41,10 +41,6 @@ class MessagerieController extends Controller
         $ip = $request->ip();
         $email = $request->email;
 
-        if (Ban::where('email', $email)->orWhere('ip', $ip)->exists()) {
-            return back()->withErrors(['email' => 'Vous avez été bloqué.']);
-        }
-
         // Enregistrement en base
         Messagerie::create([
             'name' => $request->name,
