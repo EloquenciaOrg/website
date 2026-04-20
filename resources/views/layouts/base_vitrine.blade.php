@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;600;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
-  <title>Eloquéncia</title>
-  <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
+  <title>Rhétoria</title>
+  <link rel="icon" type="image/png" href="{{ asset('images/logo_rhetoria.png') }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,6 +27,41 @@
     <noscript><p><img referrerpolicy="no-referrer-when-downgrade" data-src="https://analytics.eloquencia.org/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" data-type="image" data-name="matomo"/></p></noscript>
   <!-- Bootstrap CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ asset('css/rhetoria.css') }}">
+
+  <style>
+  
+  :root {
+  --bs-warning: #005dff;
+  --bs-warning-rgb: 0, 93, 255;
+  }
+  .btn-warning {
+  background-color: #005dff !important;
+  border-color: #005dff !important;
+  }
+  
+  .btn-warning:hover {
+  filter: brightness(90%);
+  }
+
+  .btn-outline-warning {
+  color: #005dff !important;
+  border-color: #005dff !important;
+  }
+
+  .btn-outline-warning:hover {
+  background-color: #005dff !important;
+  color: white !important;
+  }
+
+  /*mettre en blanc les liens cliquables dans la bannière en haut */
+  .navbar .nav-link {
+  color: white !important;
+  }
+  </style>
+
+
+
   <!-- Icons8 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 </head>
@@ -34,8 +71,8 @@
   <nav class="navbar navbar-expand-lg bg-warning shadow-sm fixed-top">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
-        <img src="{{ asset('images/logo.png') }}" alt="Logo" width="40" height="40" class="me-2">
-        <strong>Eloquéncia</strong>
+        <img src="{{ asset('images/logo_rhetoria.png') }}" alt="Logo" width="40" height="40" class="me-2">
+        <strong class="text-white" >Rhétoria</strong>
       </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
@@ -69,7 +106,7 @@
     <footer class="bg-light text-center py-3">
     <div class="container">
         <small class="text-muted">
-        © 2025 <strong>Eloquéncia</strong> | Fait avec 💙 et hébergé en France | <a href="/legals">Mentions légales</a>
+        © 2025 <strong>Rhétoria</strong> | Fait avec 💙 et hébergé en France | <a href="/legals">Mentions légales</a>
         </small>
     </div>
     </footer>

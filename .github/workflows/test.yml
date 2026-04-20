@@ -1,0 +1,10 @@
+name: Test Unitaire Python
+on: [push]
+
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Executer le script
+        run: python verif.py

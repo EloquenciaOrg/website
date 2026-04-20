@@ -13,6 +13,11 @@
       0%   { transform: translateX(100%); }
       100% { transform: translateX(-100%); }
     }
+    #contact label {
+      color: white !important;
+    }
+
+    
   </style>
 @section('content')
 
@@ -34,10 +39,10 @@
 
   <!-- TITRE -->
   <div class="bg-light text-center mt-3">
-    <img src="{{ asset('images/logo.png') }}" alt="logo" style="width: 120px; height: 120px;">
-    <h1 class="fw-bold fs-1 padding-top bg-light">Eloquéncia</h1>
+    <img src="{{ asset('images/logo_rhetoria.png') }}" alt="logo" style="width: 120px; height: 120px;">
+    <h1 class="fw-bold fs-1 padding-top bg-light">Rhétoria</h1>
     <p class="lead bg-light">L’art de convaincre, le plaisir de parler !</p>
-    <a href="#" class="btn btn-lg btn-warning" data-bs-toggle="modal" data-bs-target="#helloassoModal">Adhérer</a>
+    <a href="#" class="btn btn-lg btn-warning text-white" data-bs-toggle="modal" data-bs-target="#helloassoModal">Adhérer</a>
     <a href="https://www.helloasso.com/associations/eloquencia/evenements/atelier-eloquencia" class="btn btn-lg btn-outline-warning">Participer aux ateliers</a>
       <!--@guest('member')<a href="{{ url('/login') }}" class="btn btn-sm btn-warning">Connexion</a>@endguest
     @auth('member')<a href="{{ url('/lms') }}" class="btn btn-sm btn-warning">Accès au cours</a>@endauth -->
@@ -133,10 +138,10 @@
                           <div class="d-flex align-items-center mb-3">
                               <img src="{{ asset('images/reduction.webp') }}" alt="Image reduction" class="me-3 img-fluid rounded" style="max-width: 450px; max-height: 300px; object-fit: cover;">
                               <p class="flex-grow-1">Vous avez moins de 18 ans ou vous êtes étudiant ? Bénéficiez de -5€ sur votre adhésion !
-                                  Demandez une réduction en envoyant un e-mail à <a href="mailto:contact@eloquencia.org">contact@eloquencia.org</a> avec un justificatif (carte d'étudiant, certificat de scolarité, pièce d'identité...).
+                                  Demandez une réduction en envoyant un e-mail à <a href="mailto:contact@rhetoria.fr">contact@rhetoria.fr</a> avec un justificatif (carte d'étudiant, certificat de scolarité, pièce d'identité...).
                               </p>
                           </div>
-                          <a href="mailto:contact@eloquencia.org" class="btn btn-sm btn-warning mt-3 align-self-end" target="_blank">Envoyer un e-mail</a>
+                          <a href="mailto:contact@eloquencia.org" class="btn btn-sm btn-warning mt-3 align-self-end text-white" target="_blank">Envoyer un e-mail</a>
                       </div>
                   </div>
           </div>
@@ -180,7 +185,7 @@
           @enderror
 
           <input class="form-check-input mt-2" type="checkbox" id="cgu" name="cgu" required>
-          <label class="form-check-label mt-1" for="cgu">J’accepte les <a href="/legals" target="_blank">conditions générales d’utilisation des données</a></label>
+          <label class="form-check-label mt-1" for="cgu">J’accepte les <a href="/legals" target="_blank" class="cgu-link text-white" >conditions générales d’utilisation des données</a></label>
         </div>
         <div class="text-center">
           <button type="submit" class="btn btn-light px-4">Envoyer</button>
@@ -201,7 +206,7 @@
               Si possible, utilisez une autre adresse (ex: Gmail, Outlook...).
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-warning" data-bs-dismiss="modal">J'ai compris</button>
+              <button type="button" class="btn btn-main" data-bs-dismiss="modal">J'ai compris</button>
             </div>
           </div>
         </div>
