@@ -106,7 +106,7 @@
     <footer class="bg-light text-center py-3">
     <div class="container">
         <small class="text-muted">
-        © 2025 <strong>Rhétoria</strong> | Fait avec 💙 et hébergé en France | <a href="/legals">Mentions légales</a>
+        © 2026 <strong>Rhétoria</strong> | Fait avec 💙 et hébergé en France | <a href="/legals">Mentions légales</a>
         </small>
     </div>
     </footer>
