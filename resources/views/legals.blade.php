@@ -11,7 +11,7 @@
   </div>
 
   <div class="bg-white p-4 shadow rounded mb-4 border-start border-4 border-warning">
-    <h4 class="fw-bold text-dark">Eloquéncia</h4>
+    <h4 class="fw-bold text-dark">Rhétoria</h4>
     <p class="mb-1">Asssociation déclarée fonctionnant par adhésion volontaire, sous le régime "loi 1901"</p>
     <p class="mb-1">SIREN : 924704331</p>
     <p class="mb-1">SIRET : 92470433100017</p>
@@ -25,7 +25,7 @@
 
   <div class="bg-white p-4 shadow rounded mb-4 border-start border-4 border-warning">
     <h4 class="fw-bold text-dark">Édition du site</h4>
-    <p class="mb-1">Le site accessible à l’URL <a href="https://eloquencia.org" class="text-warning">https://eloquencia.org</a> est édité par l’association Eloquéncia.</p>
+    <p class="mb-1">Le site accessible à l’URL <a href="https://rhetoria.fr" class="text-warning">https://rhetoria.fr</a> est édité par l’association Rhétoria.</p>
     <p class="mb-0">Représentant légal : Marouan Jlassi.</p>
   </div>
 
@@ -36,13 +36,13 @@
 
   <div class="bg-white p-4 shadow rounded mb-4 border-start border-4 border-warning">
     <h4 class="fw-bold text-dark">Directeur de la publication</h4>
-    <p>Le directeur de la publication est le président de l’association Eloquéncia : Marouan Jlassi.</p>
+    <p>Le directeur de la publication est le président de l’association Rhétoria : Marouan Jlassi.</p>
   </div>
 
   <div class="bg-white p-4 shadow rounded mb-4 border-start border-4 border-warning">
     <h4 class="fw-bold text-dark">Contact</h4>
-    <p><strong>Demandes générales</strong> : <a href="mailto:contact@eloquencia.org" class="text-warning">contact@eloquencia.org</a></p>
-    <p><strong>Support technique</strong> : <a href="mailto:admin@eloquencia.org" class="text-warning">dev@eloquencia.org</a></p>
+    <p><strong>Demandes générales</strong> : <a href="mailto:contact@rhetoria.fr" class="text-warning">contact@rhetoria.fr</a></p>
+    <p><strong>Support technique</strong> : <a href="mailto:contact@rhetoria.fr" class="text-warning">contact@rhetoria.fr</a></p>
   </div>
 
   <div class="bg-white p-4 shadow rounded mt-4 border-start border-4 border-warning">
@@ -65,7 +65,7 @@
     <p>Les données sont hébergées chez OVH SAS. Elles ne sont pas transmises à des tiers et sont conservées 24 mois après la fin de votre adhésion.</p>
     <p>Vous pouvez demander l’accès, la rectification ou l’effacement de vos données, ainsi qu’exercer votre droit à la limitation ou opposition au traitement. En cas d’opposition ou suppression, l’adhésion sera annulée sans remboursement.</p>
     <p>Consultez le site de la <a href="https://cnil.fr" class="text-warning" target="_blank">CNIL</a> pour plus d’informations.</p>
-    <p>Pour toute demande relative au traitement des données personnelles, contactez : <a href="mailto:contact@eloquencia.org?subject=RGPD" class="text-warning">contact@eloquencia.org</a> (Objet : RGPD).</p>
+    <p>Pour toute demande relative au traitement des données personnelles, contactez : <a href="mailto:contact@rhetoria.fr?subject=RGPD" class="text-warning">contact@rhetoria.fr</a> (Objet : RGPD).</p>
   </div>
 </div>
 

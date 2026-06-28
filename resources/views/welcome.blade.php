@@ -17,7 +17,7 @@
       color: white !important;
     }
 
-    
+
   </style>
 @section('content')
 
@@ -141,7 +141,7 @@
                                   Demandez une réduction en envoyant un e-mail à <a href="mailto:contact@rhetoria.fr">contact@rhetoria.fr</a> avec un justificatif (carte d'étudiant, certificat de scolarité, pièce d'identité...).
                               </p>
                           </div>
-                          <a href="mailto:contact@eloquencia.org" class="btn btn-sm btn-warning mt-3 align-self-end text-white" target="_blank">Envoyer un e-mail</a>
+                          <a href="mailto:contact@rhetoria.fr" class="btn btn-sm btn-warning mt-3 align-self-end text-white" target="_blank">Envoyer un e-mail</a>
                       </div>
                   </div>
           </div>

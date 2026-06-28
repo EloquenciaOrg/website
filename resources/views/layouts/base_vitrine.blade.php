@@ -9,28 +9,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Eloquéncia est une association loi 1901 visant à promouvoir l'éloquence et l'art oratoire">
-    <meta name="keywords" content="eloquence, oratoire, association, loi 1901, parler en public, discours, formation, cours en ligne">
-    <meta name="author" content="Eloquéncia">
+    <meta name="description" content="Rhétoria est une association loi 1901 visant à promouvoir l'éloquence et l'art oratoire">
+    <meta name="keywords" content="rhetoria, eloquence, oratoire, association, loi 1901, parler en public, discours, formation, cours en ligne">
+    <meta name="author" content="Rhétoria">
     <meta name="robots" content="index, follow">
     <meta name="revisit-after" content="7 days">
     <meta name="language" content="fr">
-    <meta property="og:site_name" content="Eloquéncia">
-    <meta property="og:site" content="https://eloquencia.org">
+    <meta property="og:site_name" content="Rhétoria">
+    <meta property="og:site" content="https://rhetoria.fr">
     <meta property="og:title" content="Accueil">
-    <meta property="og:description" content="Eloquéncia est une association loi 1901 visant à promouvoir l'éloquence et l'art oratoire">
-    <script async="" src="https://analytics.eloquencia.org/matomo.js"></script>
+    <meta property="og:description" content="Rhétoria est une association loi 1901 visant à promouvoir l'éloquence et l'art oratoire">
+    <script async="" src="https://analytics.rhetoria.fr/matomo.js"></script>
     <script src="/js/analytics.js"></script>
     <script defer type="text/javascript" src="/js/klaro-config.js"></script>
     <script defer type="text/javascript" src="https://cdn.kiprotect.com/klaro/v0.7.22/klaro.js"></script>
     <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7.22/klaro.min.css" />
-    <noscript><p><img referrerpolicy="no-referrer-when-downgrade" data-src="https://analytics.eloquencia.org/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" data-type="image" data-name="matomo"/></p></noscript>
+    <noscript><p><img referrerpolicy="no-referrer-when-downgrade" data-src="https://analytics.rhetoria.fr/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" data-type="image" data-name="matomo"/></p></noscript>
   <!-- Bootstrap CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="{{ asset('css/rhetoria.css') }}">
 
   <style>
-  
+
   :root {
   --bs-warning: #005dff;
   --bs-warning-rgb: 0, 93, 255;
@@ -39,7 +39,7 @@
   background-color: #005dff !important;
   border-color: #005dff !important;
   }
-  
+
   .btn-warning:hover {
   filter: brightness(90%);
   }

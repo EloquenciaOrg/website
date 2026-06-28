@@ -5,7 +5,7 @@ _paq.push(["setDoNotTrack", true]);
 _paq.push(['trackPageView']);
 _paq.push(['enableLinkTracking']);
 (function() {
-    var u="https://analytics.eloquencia.org/";
+    var u="https://analytics.rhetoria.fr/";
     _paq.push(['setTrackerUrl', u+'matomo.php']);
     _paq.push(['setSiteId', '1']);
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
